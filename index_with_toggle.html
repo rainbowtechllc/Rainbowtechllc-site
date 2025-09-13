@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rainbow Tech — Network Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Outfit", sans-serif;
+      background: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("network-bg.jpg") no-repeat center center fixed;
+      background-size: cover;
+      background-attachment: fixed;
+      color: #fff;
+      transition: background 0.5s ease;
+    }
+    body.light-overlay {
+      background: 
+        linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url("network-bg.jpg") no-repeat center center fixed;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    header {
+      position: sticky; top: 0;
+      background: rgba(0,0,0,0.7);
+      padding: 20px;
+      font-weight: 800;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .hero {
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 15px #00e5ff;
+    }
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      color: #ddd;
+    }
+    .toggle-btn {
+      background: #00e5ff;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #000;
+      transition: 0.2s;
+    }
+    .toggle-btn:hover {
+      background: #00c4e0;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.8);
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Rainbow Tech
+    <button class="toggle-btn" onclick="toggleOverlay()">Toggle Overlay</button>
+  </header>
+  <section class="hero">
+    <h1>Networks that glow.<br>Reliability that shows.</h1>
+    <p>From hotel HSIA and PBX to fiber, coax, and Wi-Fi overhauls—our team designs, installs, and maintains high-availability networks with measurable performance.</p>
+  </section>
+  <footer>
+    © <span id="y"></span> Rainbow Tech • Low-Voltage & Network Services
+  </footer>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    function toggleOverlay() {
+      document.body.classList.toggle('light-overlay');
+    }
+  </script>
+</body>
+</html>
